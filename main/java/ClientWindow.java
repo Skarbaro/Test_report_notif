@@ -1,6 +1,6 @@
 public class AddTwoNumbers {
 	
-	private final Thread rxThread;
+	private final Thread rxThreadd;
     private final TCPConnectionListener eventListener;
     private final BufferedReader in;
 
@@ -33,17 +33,6 @@ public class AddTwoNumbers {
         rxThread.start();
 		rxThread.start();
     }
-   public static void main(String[] args) {
-      int num1 = 5, num2 = 15, sum;
-      sum = num1 + num2;
-      System.out.println("Sum of these numbers: "+sum);
-   }
-   
-   public static void main(String[] args) {
-      int num1 = 5, num2 = 15, sum;
-      sum = num1 + num2;
-      System.out.println("Sum of these numbers: "+sum);
-   }
    
    public static void main(String[] args) {
       int num1 = 5, num2 = 15, sum;
@@ -60,6 +49,7 @@ public class AddTwoNumbers {
             disconnect();
         }
     }
+
 	public synchronized void sendString(String value) {
         try {
             out.write(value + "\r\n");
@@ -69,15 +59,7 @@ public class AddTwoNumbers {
             disconnect();
         }
     }
-	public synchronized void sendString(String value) {
-        try {
-            out.write(value + "\r\n");
-            out.flush();
-        } catch (IOException e) {
-            eventListener.onException(TCPConnection.this, e);
-            disconnect();
-        }
-    }
+	
    public static void main(String[] args) {
       int num1 = 5, num2 = 15, sum;
       sum = num1 + num2;
